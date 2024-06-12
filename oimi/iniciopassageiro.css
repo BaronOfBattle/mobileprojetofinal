@@ -1,0 +1,188 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando a fonte */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins-Bold', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.perfil {
+    margin-right: 10px;
+}
+
+#perfil-img {
+    width: 100%;
+}
+
+.img img {
+    width: 45px;
+    height: auto;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+
+.location-icon {
+    color: #79C61E; 
+    font-size: 15px;
+    vertical-align: middle; 
+}
+
+.tema {
+    margin-top: 30px;
+    color:#79C61E;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 92%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 30px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; /* Aplicando a fonte */
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.palavras {
+   font-size: 25px;
+   display: flex;
+   justify-content: space-between; /* igualmente as palavras */
+   margin-left: 20px;
+   margin-right: 20px;
+   color: #79C61E;
+}
+
+.seletar {
+    background-color: transparent; /* Define o fundo como transparente */
+    border: none; /* Remove a borda */
+    border-radius: 0; /* Remove o arredondamento da borda */
+    color: #79C61E; /* Cor do texto */
+    width: 13%; /* Largura do seletor */
+    height: 40px; /* Altura do seletor */
+    font-size: 25px; /* Tamanho da fonte */
+    font-family: 'Poppins-Bold', sans-serif; /* Fonte */
+    appearance: none; /* Remove a aparência padrão do seletor */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0; /* Remove o preenchimento interno */
+   
+}
+
+.seletar option {
+    color: #000000; /* Cor do texto das opções */
+    font-family: 'Poppins-Bold', sans-serif; /* Fonte das opções */
+}
+
+.palavras {
+    position: relative; /* Define a posição relativa para que a seta seja posicionada corretamente */
+}
+
+.palavras::after {
+    content: "\25BC"; /* Unicode para a seta apontando para baixo */
+    position: absolute; /* Define a posição absoluta para a seta */
+    top: 50%; /* Posiciona a seta verticalmente no centro */
+    right: -15px; /* Posiciona a seta horizontalmente ao lado da palavra "IDA" */
+    font-size: 20px; /* Tamanho da seta */
+    transform: translateY(-50%); /* Ajusta a posição verticalmente para o centro */
+    color: #79C61E; /* Cor da seta */
+}
+
+
+
+
+.btn-viajar {
+    margin-left: 15px;
+    color: #79C61E;
+}
+
+.btn-viajar2 {
+    margin-left: 15px;
+}
+
+/* quadradao de cima*/
+.btn-viagem-container {
+    background-color: #e5e6e5; 
+    border-radius: 10px; 
+    color: #000000;
+    padding: 16px; 
+    width: 100%; /* ocupa toda a largurao */
+    height: 300px;
+    font-size: 20px;
+    text-align: left; /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;
+    margin-top: 25px;
+    
+}
+
+
+.horario {
+    margin-top: 25px;
+    font-size:25px;
+    margin-left: 15px;
+    
+}
+
+.etapas {
+    margin-top: -42px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 100px;
+    
+}
+
+
+.destaque {
+    color: #000000;
+    font-family: 'Poppins-Bold', sans-serif;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+    vertical-align: auto;
+    margin-top: -5px;
+    font-size: 16px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Rideshare</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE <span class="help">Precisa de ajuda?</span></h1>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="login-box">
+            <input type="text" placeholder="Nome e sobrenome">
+            <input type="text" placeholder="E-mail">
+            <input type="text" id="datepicker" placeholder="Data de Nascimento">
+            <div class="select-container">
+                <br>
+                <select>
+                    <option selected disabled>Pronome que você se identifica</option>
+                    <option>Ele/dele</option>
+                    <option>Ela/dela</option>
+                    <option>Elu/delu</option>
+                </select>
+            </div>
+
+            <div class="login-box">
+                <input type="password" placeholder="Senha">
+                <input type="password" placeholder="Confirmar senha">
+            </div>
+        
+            <div class="checkbox-container">
+                <input type="checkbox" id="check1">
+                <label for="check1" class="checkbox-label">Li e concordo com os <a href="termos.html">Termos e Condições de Uso</a>. Os Termos estarão disponíveis para consulta dentro do app.</label>
+            </div>
+            <br>
+            <hr class="separator">
+            <div class="btn-continuar-container"> 
+                <h3 class="btn-continuar">CONTINUAR</h3>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                changeYear: true,
+                changeMonth: true,
+                yearRange: "-100:+0"
+            });
+
+            $(".btn-continuar").click(function(){
+               
+                window.location.href = "escolhamodo.html";
+            });
+        });
+    </script>
+</body>
+</html>

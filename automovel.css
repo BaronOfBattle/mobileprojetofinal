@@ -1,0 +1,159 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando a fonte */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins-Bold', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.help {
+    font-size: 15px;
+    color: #79C61E; 
+    vertical-align: middle; 
+    margin-left: 51px; 
+}
+
+.location-icon {
+    color: #79C61E; 
+    font-size: 15px;
+    vertical-align: middle; 
+}
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 30px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; /* Aplicando a fonte */
+}
+
+.tema {
+    margin-top: 30px;
+    color: #79C61E;
+}
+
+.subtema{
+margin-top: 10px;
+}
+
+.descriçao {
+margin-top: 20px;
+font-weight: 300;
+}
+
+
+.btn-arquivo button {
+    margin-top: 20px;
+    background-color: #e4e4e4; 
+    border-radius: 4px; 
+    padding: 16px; 
+    width: 100%;
+    height: 65px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('image.png');
+    background-size: 9%;
+    opacity: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+/* continuar*/
+.btn-continuar-container {
+    background-color: #e3e3e3; 
+    border-radius: 4px; 
+    color: #79C61E;
+    padding: 16px; 
+    width: 100%; /* ocupa toda a largurao */
+    height: 65px;
+    font-size: 20px;
+    text-align: center; /* centraliza horizontalmente */
+    display: flex;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;
+}
+
+.select-container select {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; 
+    color: #000000; 
+}
+
+
+.select-items {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    top: calc(100% - 1px); 
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid #ddd8d898;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    
+}
+
+
+.select-items div:hover {
+    background-color: #f1f1f1;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-arrow {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 120x;
+    pointer-events: none;
+}
+
+.separator {
+    margin-bottom: 30px; 
+    margin-top: 40px; 
+}

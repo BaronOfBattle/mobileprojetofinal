@@ -1,0 +1,268 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando a fonte */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins-Bold', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.perfil {
+    margin-right: 10px;
+}
+
+#perfil-img {
+    width: 100%;
+}
+
+.img img {
+    width: 45px;
+    height: auto;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+
+.location-icon {
+    color: #79C61E; 
+    font-size: 15px;
+    vertical-align: middle; 
+}
+
+.tema {
+    margin-top: 30px;
+    color:#79C61E;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 92%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 30px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; /* Aplicando a fonte */
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+
+/* continuar*/
+.btn-continuar-container {
+    background-color: #79C61E; 
+    border-radius: 10px; 
+    color: #000000;
+    padding: 16px; 
+    width: 100%; /* ocupa toda a largurao */
+    height: 65px;
+    font-size: 20px;
+    text-align: center; /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+
+.btn-viajar {
+    margin-left: 15px;
+    color: #79C61E;
+}
+
+.btn-viajar2 {
+    margin-left: 15px;
+}
+
+/* quadradao de cima*/
+.btn-viagem-container {
+    background-color: #e5e6e5; 
+    border-radius: 10px; 
+    color: #000000;
+    padding: 16px; 
+    width: 100%; /* ocupa toda a largurao */
+    height: 300px;
+    font-size: 20px;
+    text-align: left; /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;
+    margin-top: 25px;
+    
+}
+
+
+.horario {
+    margin-top: 25px;
+    font-size:25px;
+    margin-left: 15px;
+    
+}
+
+.etapas {
+    margin-top: -42px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 100px;
+    
+}
+
+
+.destaque {
+    color: #000000;
+    font-family: 'Poppins-Bold', sans-serif;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+    vertical-align: auto;
+    margin-top: -5px;
+    font-size: 16px;
+}
+
+
+/* quadradao de baixo*/
+.btn-solicitar-container {
+    background-color: #e5e6e5; 
+    border-radius: 10px; 
+    color: #000000;
+    padding: 16px; 
+    width: 100%; /* ocupa toda a largurao */
+    height: 240px;
+    font-size: 20px;
+    text-align: left; /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;
+    margin-top: 25px;
+}
+
+
+
+.info{
+    margin-left: 15px;
+    margin-top: 10px;
+text-align: left; /* alinhar o texto na direita */
+margin-right: 20px;
+font-size:  16px;
+}
+
+
+
+/* do 4.9 de baixo*/
+.rectangle {
+width: 53px; /* largura */
+height: 23px; /* altura*/
+background-color: #c7cac6;
+border-radius: 35%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 3px;
+
+}
+
+.circle {
+    width: 100px; /* largura */
+    height: 100px;
+    background-color: #b5b6b5;  
+    border-radius: 100%;  
+margin-left: 280px;
+margin-top: -90px;
+}
+
+.button-container {
+    text-align: center; /* Alinha os botões horizontalmente */
+}
+
+.button {
+    background-color: #bfc0bd;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    padding: 16px;
+    width: 46%; /* A largura será definida pelo conteúdo */
+    height: 65px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px; /* Altura da linha para centralizar verticalmente o texto */
+    display: inline-block; /* Permite que os botões fiquem lado a lado */
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+   /* Espaçamento entre os botões */
+    transition: background-color 0.3s; /* Adiciona uma transição suave na mudança de cor de fundo */
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+.button + .button2 {
+    margin-left: 15px; /* Espaçamento entre os botões */
+}
+
+.button:hover {
+    background-color: #6AAE1C; /* Cor de fundo quando o botão está em hover */
+}
+
+.button2 {
+    background-color: #79C61E;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    padding: 16px;
+    width: 46%; /* A largura será definida pelo conteúdo */
+    height: 65px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px; /* Altura da linha para centralizar verticalmente o texto */
+    display: inline-block; /* Permite que os botões fiquem lado a lado */
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 15px;
+   /* Espaçamento entre os botões */
+    transition: background-color 0.3s; /* Adiciona uma transição suave na mudança de cor de fundo */
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+.button2:hover {
+    background-color: #6AAE1C; /* Cor de fundo quando o botão está em hover */
+}

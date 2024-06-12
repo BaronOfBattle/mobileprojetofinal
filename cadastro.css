@@ -1,0 +1,212 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando a fonte */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins-Bold', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.help {
+    font-size: 15px;
+    color: #79C61E; 
+    vertical-align: middle; 
+    margin-left: 51px; 
+}
+
+.location-icon {
+    color: #79C61E; 
+    font-size: 15px;
+    vertical-align: middle; 
+}
+
+input[type="text1"],
+input[type="password"] {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 40px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; /* Aplicando a fonte */
+}
+
+
+
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 20px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; /* Aplicando a fonte */
+}
+
+input[type="text2"],
+input[type="password"] {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 20px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; /* Aplicando a fonte */
+}
+
+
+.tema {
+    margin-top: 20px;
+}
+
+
+
+.select-container select {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -10px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; 
+    color: #000000; 
+}
+
+
+.select-items {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    top: calc(100% - 1px); 
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid #ddd8d898;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    
+}
+
+
+.select-items div:hover {
+    background-color: #f1f1f1;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-arrow {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 120x;
+    pointer-events: none;
+}
+
+
+
+/* continuar*/
+.btn-continuar-container {
+    background-color: #e3e3e3; 
+    border-radius: 4px; 
+    color: #79C61E;
+    padding: 16px; 
+    width: 100%; /* ocupa toda a largurao */
+    height: 65px;
+    font-size: 20px;
+    text-align: center; /* centraliza horizontalmente */
+    display: flex;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;
+}
+
+
+.separator {
+    margin-bottom: 30px; 
+    margin-top: 2px; 
+}
+
+.checkbox-container {
+    margin-top: 60px;
+}
+
+/* Estilo para o calendário jQuery Dark Hive Theme */
+
+
+.ui-widget-content {
+   color: #79C61E
+}
+
+.ui-datepicker-calendar {
+    background: #ffffff; /* Cor de fundo do calendário */
+    border: #79C61E;
+}
+
+.ui-datepicker-header {
+    background: #000000; /* Cor de fundo do cabeçalho do calendário */
+    color: #ffffff; /* Cor do texto do cabeçalho */
+    font-weight: medium; /* Texto em negrito */
+}
+
+.ui-datepicker-title {
+    margin:  5px; /* Margem do título */
+    line-height: 1.8em; /* Altura da linha do título */
+    /* Alinhamento do texto */
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+  
+    border: 0px solid #79C61E; /* Cor da borda dos botões de navegação */
+    color: #ffffff; /* Cor do texto dos botões de navegação */
+    margin-left: 5px;
+}
+
+
+
+.ui-datepicker-calendar a {
+    color: #000000; /* Cor dos números do calendário */
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.ui-datepicker-week-end a {
+    color: #000000; /* Cor dos números do calendário nos fins de semana */
+    
+}

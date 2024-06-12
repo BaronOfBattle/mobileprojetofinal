@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="escolhamodo.css">
+    <title>Rideshare</title>
+    <style>
+        .btn-continuar a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .btn-continuar a:hover,
+        .btn-continuar a:active,
+        .btn-continuar a:focus {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE</h1>
+        <div class="help">Precisa de ajuda?</div>
+    </div>
+    <br>
+    <hr>
+    <p class="tema"> Selecione uma categoria </p>
+    <p class="subtema"> A opção escolhida pode ser a qualquer momento </p>
+    <div class="container">
+        <div class="caixas">
+            <button onclick="selectOption('motorista')" data-option="motorista"><span>Motorista</span></button>
+            <button onclick="selectOption('passageiro')" data-option="passageiro"><span>Passageiro/a</span></button>
+            <button onclick="selectOption('ambos')" data-option="ambos"><span>Ambos</span></button>
+        </div>
+        <br>
+        <hr class="separator">
+        <div class="btn-continuar-container">
+            <h3 class="btn-continuar"><a href="#" onclick="goToCadastro()">CONTINUAR</a></h3>
+        </div>
+    </div>
+</body>
+</html>

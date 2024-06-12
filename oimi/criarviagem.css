@@ -1,0 +1,166 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando a fonte */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins-Bold', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.perfil {
+    margin-right: 10px;
+}
+
+#perfil-img {
+    width: 100%;
+}
+
+.img img {
+    width: 45px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+
+.location-icon {
+    color: #79C61E; 
+    font-size: 15px;
+    vertical-align: middle; 
+}
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 92%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 30px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; /* Aplicando a fonte */
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.tema {
+    margin-top: 25px;
+    color: #79C61E;
+    margin-left: 20px;
+}
+
+.tema2 {
+    margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* pra deixar do lado o numero do cep */
+.cep-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seletar{
+    width: 92%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 30px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; /* Aplicando a fonte */
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* continuar*/
+.btn-continuar-container {
+    background-color: #79C61E; 
+    border-radius: 15px; 
+    color: #000000;
+    padding: 16px; 
+    width: 50%; /* ocupa toda a largurao */
+    height: 65px;
+    font-size: 20px;
+    text-align: center; /* centraliza horizontalmente */
+    display: block;
+    margin: auto;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;
+    margin-top: 25px;
+}
+
+.separator {
+    margin-top: 10px; 
+}
+
+.btn-arquivo button {
+    margin-top: 100px;
+    background-color: #ffffff90; 
+    border-color: #b0b2af;
+    width: 92%;
+    height: 65px;
+    margin-left: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('api.png');
+    background-size: 9%;
+    opacity: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(170, 169, 169) ;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-cadastrar a {
+    color: #020101; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 20px; 
+}
+
+.btn-cadastrar a:hover {
+    color: #000000; 
+    text-decoration: underline; /
+}

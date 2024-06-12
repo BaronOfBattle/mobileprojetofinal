@@ -1,0 +1,107 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fonte nao tocar */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins-Bold', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.help {
+    font-size: 15px;
+    color: #79C61E; 
+    vertical-align: middle; 
+    margin-left: 51px; 
+}
+
+.location-icon {
+    color: #79C61E; 
+    font-size: 15px;
+    vertical-align: middle; 
+}
+
+/* tela de cadastro */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    margin-top: 30px; 
+    border: 1px solid #ddd8d898;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    font-family: 'Poppins-Bold', sans-serif; 
+}
+
+/* "Esqueceu sua senha?" */
+.forgot-password {
+    text-align: right;
+    font-weight: bolder;
+    margin-top: 0px;
+    color: #585858; 
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+/* "INICIAR" */
+.btn-iniciar {
+    text-align: center; 
+    background-color: #e3e3e3;
+    color: #79C61E;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto; 
+    display: block; 
+    margin-bottom: 30px; 
+    margin-top: 100px;
+}
+
+/* CADASTRAR-SE */
+.btn-cadastrar {
+    background-color: #ddd8d898;
+    color: #79C61E;
+    font-size: 22px;
+    padding: 16px;
+    text-align: left; 
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    font-family: 'Poppins-Bold', sans-serif;
+    display: inline-block; 
+    margin-right: auto; 
+    margin-left: 0; 
+}
+
+
+
+.separator {
+    margin-bottom: 40px; 
+    margin-top: 250px; 
+}

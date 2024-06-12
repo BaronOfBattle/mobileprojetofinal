@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Responsivo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-8.047562, -34.877002], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Adicione um marcador para a localização do usuário
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var userLat = position.coords.latitude;
+            var userLng = position.coords.longitude;
+            L.marker([userLat, userLng]).addTo(map)
+                .bindPopup('Sua Localização Atual')
+                .openPopup();
+        });
+
+        // Requisição para obter os pontos de interesse da API
+        fetch('/api/points')
+            .then(response => response.json())
+            .then(data => {
+                // Adicione marcadores para cada ponto de interesse
+                data.forEach(function (point) {
+                    L.marker(point.latlng).addTo(map).bindPopup(point.name);
+                });
+            });
+
+        // Atualize o tamanho do mapa quando a janela for redimensionada
+        window.addEventListener('resize', function () {
+            map.invalidateSize();
+        });
+    </script>
+</body>
+</html>

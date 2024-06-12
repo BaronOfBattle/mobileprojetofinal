@@ -1,0 +1,97 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fonte nao tocar */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins-Bold', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.help {
+    font-size: 15px;
+    color: #79C61E; 
+    vertical-align: middle; 
+    margin-left: 51px; 
+}
+
+.location-icon {
+    color: #79C61E; 
+    font-size: 15px;
+    vertical-align: middle; 
+}
+
+.tema{
+    color: #79C61E;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+pre {
+    word-wrap: break-word;
+    white-space: pre-wrap; /* quebra de texto */
+    max-height: calc(100vh - 200px); /* altura do texto */
+    padding-left: 10px; 
+    padding-right: 10px;
+    font-size: 15px;
+    font-family: 'Poppins-Bold', sans-serif;
+    font-weight: 200;
+    
+}
+
+.btn-continuar-container {
+    text-align: center; 
+}
+
+/* CADASTRAR-SE */
+.btn-continuar {
+    background-color: #ddd8d898;
+    color: #79C61E;
+    font-size: 22px;
+    width: 100%;
+    padding: 16px;
+    text-align: center; 
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    font-family: 'Poppins-Bold', sans-serif;
+    display: inline-block; 
+    margin-right: auto; 
+    margin-left: 0; 
+    margin-top: -15px;
+    margin-bottom: 20px;
+    border: none; 
+    outline: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-continuar:hover {
+    background-color: #e5e5e5; 
+}
+
+.separator {
+    margin-bottom: 40px; 
+    margin-top: 7350px; 
+}

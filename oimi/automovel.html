@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="automovel.css">
+    <title>Rideshare</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE <span class="help">Precisa de ajuda?</span></h1>
+    </div>
+    <hr>
+    <h2 class="tema"> Dados do veículo </h2>
+    <h4 class="subtema"> Preencha os campos de acordo com os dados do seu veículo. </h4>
+    <div class="select-container">
+        <div>
+            <select> 
+                <option selected disabled>Tipo de automóvel</option>
+                <option>Motocicleta</option>
+                <option>Carro</option>
+            </select>
+        </div>
+        <div class="login-box">
+            <input type="text" placeholder="Modelo">
+            <input type="text" placeholder="Placa">
+            <input type="text" placeholder="Cor">
+            <h4 class="descriçao">Agora, inclua uma foto do documento do veículo:</h4>
+            <div class="btn-arquivo">
+                <button></button>
+            </div>
+            <hr class="separator">
+            <div class="btn-continuar-container"> 
+                <h3 class="btn-cadastrar" onclick="continuar()">CONTINUAR</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function continuar() {
+   
+            sessionStorage.setItem('dadosDoVeiculoConcluidos', 'true');
+       
+            window.location.href = 'cadastromotorista.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Viagem</title>
+    <link rel="stylesheet" href="criarviagem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE</h1>
+        <div class="circle-container">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <hr>
+    <h2 class="tema"> Anunciar viagem: </h2>
+    <h4 class="tema2"> Preencha os dados da sua viagem. </h4>
+
+    <div class="container">
+        <div class="login-box">
+            <input type="text" placeholder="Local de partida">
+            <input type="text" placeholder="Local de chegada">
+            <input type="text" id="horario" placeholder="Horário de saída">
+            <input type="text" id="valor" placeholder="Valor">
+        </div>
+        <select class="seletar">
+            <option selected disabled>Vagas disponíveis</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select>
+        <select class="seletar">
+            <option selected disabled>Selecione o veículo</option>
+            <option>UNO FLEX</option>
+            <option>TITAN 160 FLEX</option>
+        </select>
+        <select class="seletar">
+            <option selected disabled>IDA</option>
+            <option>SÓ IDA</option>
+            <option>IDA E VOLTA</option>
+        </select>
+    </div>
+
+    <div class="btn-arquivo">
+        <a href="mapa.html">
+            <button></button>
+        </a>
+    </div>
+    <br>
+    <hr class="separator">
+    <div class="btn-continuar-container">
+        <h3 class="btn-cadastrar"><a href="iniciomotorista.html">Concluído</a></h3>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-item">
+            <a href="iniciomotorista.html" class="footer-link">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+        <div class="footer-item">
+            <a href="criarviagem.html" class="footer-link active">
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+        <div class="footer-item">
+            <a href="perfil.html" class="footer-link">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+        <div class="footer-item">
+            <a href="chat.html" class="footer-link">
+                <i class="fas fa-comment-dots"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        var savedProfileImageSrc = localStorage.getItem("selectedImageSrc");
+        if (savedProfileImageSrc) {
+           
+            var profileImage = document.createElement("img");
+            profileImage.src = savedProfileImageSrc;
+            profileImage.alt = "Foto de Perfil";
+            profileImage.style.width = "100%";
+            profileImage.style.height = "100%";
+            profileImage.style.borderRadius = "50%";
+            document.querySelector('.circle').appendChild(profileImage);
+        }
+    });
+
+    // Automatizar o campo "Horário de saída"
+    document.getElementById('horario').addEventListener('input', function (e) {
+        var horario = e.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        if (horario.length > 2) { // Adiciona o ":" após os dois primeiros dígitos
+            horario = horario.substring(0, 2) + ':' + horario.substring(2);
+        }
+        e.target.value = horario.substring(0, 5); // Limita a 5 dígitos (incluindo o ":")
+    });
+
+    // Automatizar o campo "Valor"
+    document.getElementById('valor').addEventListener('input', function (e) {
+        var valor = e.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        if (valor.length > 2) { // Adiciona o "R$" e a ","
+            valor = 'R$ ' + valor.substring(0, valor.length - 2) + ',' + valor.substring(valor.length - 2);
+        } else {
+            valor = 'R$ ' + valor;
+        }
+        e.target.value = valor; // Atualiza o valor do campo
+    });
+
+   
+    window.addEventListener('scroll', function() {
+        var footer = document.querySelector('.footer');
+
+       
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            footer.style.display = 'none'; 
+        } else {
+            footer.style.display = 'flex'; 
+        }
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iniciopassageiro2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Rideshare</title>
+    <style>
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE</h1>
+    </div>
+    <div class="circle-container">
+        <div class="circle"></div>
+    </div>
+    <hr>
+    <br>
+
+    <div class="info-container">
+        <div class="motorista-foto">
+            <img src="foto1.png" alt="Foto do Motorista">
+        </div>
+        <h3 class="nome-motorista">João</h3>
+        <h3 class="cargo">PROFESSOR - FAC SENAC</h3>
+        <h3 class="btn-viajar">IDA - R$ 4,00</h3>
+        <h4 class="btn-viajar2">FIAT UNO 1.0 FIRE FLEX</h4>
+        <br>
+    </div>
+    <hr>
+    <br>
+    <div class="gray-background">
+        <h3 class="horario">HORÁRIO DA SAÍDA 17:30</h3>  
+        <h3 class="destaque">Faculdade SENAC<br>R. do Pombal, 57 - Santo Amaro - Recife</h3>
+        <h3 class="destaque">TI Pelópidas<br>Terminal integrado Pelópidas - Paulista</h3>
+        <h3 class="vagas">VAGAS 2/3</h3>
+        <br>
+    </div>
+    <br>
+    <hr>
+
+
+    <div class="button-container">
+        <div class="button" style="background-color: #CDE5B0;" onclick="solicitarCarona()">SOLICITAR CARONA</div>
+        <br>
+        <div class="button" style="background-color: #CDE5B0;" onclick="voltar()">Voltar</div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-item">
+            <a href="iniciomotorista.html" class="footer-link active">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+        <div class="footer-item">
+            <a href="#" class="footer-link footer-plus">
+                <i class="fas fa-plus"></i>
+            </a>
+        </div>
+        <div class="footer-item">
+            <a href="perfil.html" class="footer-link">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+        <div class="footer-item">
+            <a href="chat.html" class="footer-link">
+                <i class="fas fa-comment-dots"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+
+function solicitarCarona() {
+            var botao = document.querySelector('.button');
+            botao.textContent = 'AGUARDANDO CONFIRMAÇÃO';
+            setTimeout(function() {
+                botao.textContent = 'CARONA CONFIRMADA';
+                botao.style.backgroundColor = '#79C61E'; 
+                setTimeout(function() {
+                    window.location.href = 'iniciomotorista.html';
+                }, 5000);
+            }, 10000);
+        }
+
+        window.addEventListener('scroll', function() {
+            var footer = document.querySelector('.footer');
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                footer.style.display = 'none';
+            } else {
+                footer.style.display = 'flex'; 
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var savedProfileImageSrc = localStorage.getItem("selectedImageSrc");
+            if (savedProfileImageSrc) {
+                var profileImage = document.createElement("img");
+                profileImage.src = savedProfileImageSrc;
+                profileImage.alt = "Foto de Perfil";
+                profileImage.style.width = "100%";
+                profileImage.style.height = "100%";
+                profileImage.style.borderRadius = "50%";
+                document.querySelector('.circle').appendChild(profileImage);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const passageiroButton = document.getElementById('passageiro');
+            const motoristaButton = document.getElementById('motorista');
+            const plusButton = document.querySelector('.footer-plus');
+
+            function selectRole(selectedButton, otherButton) {
+                selectedButton.classList.add('selected');
+                selectedButton.classList.remove('not-selected');
+                otherButton.classList.add('not-selected');
+                otherButton.classList.remove('selected');
+            }
+
+            passageiroButton.addEventListener('click', function () {
+                if (localStorage.getItem('selectedRole') === 'ambos') { // Verifica se o usuário escolheu ambos
+                    selectRole(passageiroButton, motoristaButton);
+                    localStorage.setItem('selectedRole', 'passageiro');
+                }
+            });
+
+            motoristaButton.addEventListener('click', function () {
+                if (localStorage.getItem('selectedRole') === 'ambos') { // Verifica se o usuário escolheu ambos
+                    selectRole(motoristaButton, passageiroButton);
+                    localStorage.setItem('selectedRole', 'motorista');
+                }
+            });
+
+            // Initialize with one button selected based on stored role
+            const savedRole = localStorage.getItem('selectedRole');
+            if (savedRole === 'motorista' || savedRole === 'ambos') {
+                selectRole(motoristaButton, passageiroButton);
+            } else {
+                selectRole(passageiroButton, motoristaButton);
+            }
+
+            // Add event listener for redirection on plus button click
+            plusButton.addEventListener('click', function () {
+                if (passageiroButton.classList.contains('selected')) {
+                    window.location.href = 'solicitarviagem.html';
+                } else if (motoristaButton.classList.contains('selected')) {
+                    window.location.href = 'criarviagem.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="criarviagem.css">
+    <title>Rideshare</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png"
+                    alt="Ícone de Localização"></span>DESHARE
+        </h1>
+        <div class="menu">
+            <div class="perfil" style="background-color: black; border-radius: 100%; width: 40px; height: 40px;">
+                <img id="perfil-img" src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Foto de Perfil">
+            </div>
+            <span class="img"><img src="menu.jpeg" alt="Ícone de Menu"></span>
+        </div>
+    </div>
+    <hr>
+    <h2 class="tema"> Anunciar viagem: </h2>
+    <h4 class="tema2"> Preencha os dados da sua viagem. </h4>
+
+    <div class="container">
+        <div class="login-box">
+            <input type="text" placeholder="Local de partida">
+            <input type="text" placeholder="Local de chegada">
+            <input type="text" id="horario" placeholder="Horário de saída">
+            <input type="text" id="valor" placeholder="Valor">
+        </div>
+        <select class="seletar">
+            <option selected disabled>Vagas disponíveis</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select>
+        </div>
+        <select class="seletar">
+            <option selected disabled>Selecione o veículo</option>
+            <option>UNO FLEX</option>
+            <option>TITAN 160 FLEX</option>
+        </select>
+    </div>
+    <select class="seletar">
+        <option selected disabled>IDA</option>
+        <option>SÓ IDA</option>
+        <option>IDA E VOLTA</option>
+    </select>
+        <div class="btn-arquivo">
+            <a href="mapa.html">
+                <button>
+        
+                </button>
+            </a>
+        </div>
+        
+            </a>
+        </div>
+        
+
+    </div>
+    <br>
+    <hr class="separator">
+    <div class="btn-continuar-container">
+        <h3 class="btn-cadastrar"><a href="iniciomotorista.html" onclick=>Concluído</a></h3>
+    </div>
+    <script>
+        // Automatizar o campo "Horário de saída"
+        document.getElementById('horario').addEventListener('input', function (e) {
+            var horario = e.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            if (horario.length > 2) { // Adiciona o ":" após os dois primeiros dígitos
+                horario = horario.substring(0, 2) + ':' + horario.substring(2);
+            }
+            e.target.value = horario.substring(0, 5); // Limita a 5 dígitos (incluindo o ":")
+        });
+
+        // Automatizar o campo "Valor"
+        document.getElementById('valor').addEventListener('input', function (e) {
+            var valor = e.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            if (valor.length > 2) { // Adiciona o "R$" e a ","
+                valor = 'R$ ' + valor.substring(0, valor.length - 2) + ',' + valor.substring(valor.length - 2);
+            } else {
+                valor = 'R$ ' + valor;
+            }
+            e.target.value = valor; // Atualiza o valor do campo
+        });
+    </script>
+
+</body>
+
+</html>

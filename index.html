@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#79C61E">
+        <title>Rideshare</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE <span class="help">Precisa de ajuda?</span></h1>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="login-box">
+                <input type="text" placeholder="E-mail ou telefone">
+                <input type="password" id="password" placeholder="Senha">
+                <p class="forgot-password">Esqueceu sua senha?</p>
+                <h3 class="btn-iniciar">INICIAR</h3>
+                <br>
+                <hr class="separator">
+                <div class="btn-cadastrar-container"> 
+                    <h3 class="btn-cadastrar custom-btn-cadastrar">CADASTRAR-SE</h3>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('.btn-cadastrar').addEventListener('click', function() {
+                    window.location.href = 'cadastro.html';
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('.btn-iniciar').addEventListener('click', function() {
+                    window.location.href = 'perfil.html';
+                });
+            });
+
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+
+        </script>
+    </body>
+    </html>

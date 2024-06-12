@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fotoperfil2.css">
+    <title>Rideshare</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE</h1>
+        <div class="help">Precisa de ajuda?</div>
+    </div>
+    <br>
+    <hr>
+    <p class="tema">Perfil de usuário</p>
+    <p class="subtema">Adicione uma foto ao seu perfil para facilitar o reconhecimento pelos outros usuários.</p>
+    <div class="container">
+        <ol>
+            <li>Certifique-se de estar de frente para a câmera.</li>
+            <li>Escolha um ambiente bem iluminado.</li>
+            <li>Qualidade: Verifique se a foto está nítida para uma representação clara e precisa.</li>
+        </ol>
+        <br>
+        <div class="btn-arquivo">
+            <button></button>
+        </div>
+        <hr class="separator">
+        <div> 
+            <button class="btn-continuar" onclick="continuar()">CONTINUAR</button>
+        </div>
+    </div>
+    <script src="fotoperfil2.js" defer></script>
+    <script>
+        function continuar() {
+            // Definir a variável de sessão para indicar que o perfil de usuário foi concluído
+            sessionStorage.setItem('perfilDeUsuarioConcluido', 'true');
+            // Redirecionar para a página de cadastromotorista.html
+            window.location.href = 'cadastromotorista.html';
+        }
+    </script>
+</body>
+</html>

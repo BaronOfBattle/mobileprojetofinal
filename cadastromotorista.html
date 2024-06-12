@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastromotorista.css">
+    <title>Rideshare</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE</h1>
+        <div class="help">Precisa de ajuda?</div>
+    </div>
+    <br>
+    <hr>
+    <p class="tema"> Cadastro de motoristas </p>
+    <p class="subtema"> Preencha os campos para continuar </p>
+    <div class="container">
+        <div class="etapas">
+            <button id="perfilBtn" class="destaque" onclick="window.location.href = 'fotoperfil2.html'">Perfil de usuário<br><span>Etapa pendente</span></button>
+            <hr class="linha">
+            <button id="empresaBtn" class="destaque" onclick="window.location.href = 'cadastrocep2.html'">Dados da empresa<br><span>Etapa pendente</span></button>
+            <hr class="linha">
+            <button id="automovelBtn" class="destaque" onclick="window.location.href = 'automovel.html'">Automóvel<br><span>Etapa pendente</span></button>
+            <hr class="linha">
+            <button id="cnhBtn" class="destaque" onclick="window.location.href = 'cnh.html'">Carteira Nacional de Habilitação (CNH)<br><span>Etapa pendente</span></button>
+            <hr class="linha">
+            <button id="termosBtn" class="destaque" onclick="window.location.href = 'termos2.html'">Termos de uso e segurança<br><span>Etapa pendente</span></button>
+            <hr class="linha">
+        </div>
+        <br>
+        <hr class="separator">
+        <div> 
+            <button class="btn-cadastrar" onclick="window.location.href = 'perfil.html'">CONTINUAR</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            var perfilDeUsuarioConcluido = sessionStorage.getItem('perfilDeUsuarioConcluido');
+            if (perfilDeUsuarioConcluido === 'true') {
+                var perfilBtn = document.getElementById('perfilBtn');
+                if (perfilBtn) {
+                    perfilBtn.classList.add('concluida');
+                    perfilBtn.querySelector('span').textContent = 'Etapa concluída';
+                    perfilBtn.querySelector('span').style.color = '#79C61E';
+                }
+            }
+
+            var dadosDaEmpresaConcluidos = sessionStorage.getItem('dadosDaEmpresaConcluidos');
+            if (dadosDaEmpresaConcluidos === 'true') {
+                var empresaBtn = document.getElementById('empresaBtn');
+                if (empresaBtn) {
+                    empresaBtn.classList.add('concluida');
+                    empresaBtn.querySelector('span').textContent = 'Etapa concluída';
+                    empresaBtn.querySelector('span').style.color = '#79C61E';
+                }
+            }
+
+    
+            var dadosDoVeiculoConcluidos = sessionStorage.getItem('dadosDoVeiculoConcluidos');
+            if (dadosDoVeiculoConcluidos === 'true') {
+                var automovelBtn = document.getElementById('automovelBtn');
+                if (automovelBtn) {
+                    automovelBtn.classList.add('concluida');
+                    automovelBtn.querySelector('span').textContent = 'Etapa concluída';
+                    automovelBtn.querySelector('span').style.color = '#79C61E';
+                }
+            }
+
+
+            var cnhConcluida = sessionStorage.getItem('cnhConcluida');
+            if (cnhConcluida === 'true') {
+                var cnhBtn = document.getElementById('cnhBtn');
+                if (cnhBtn) {
+                    cnhBtn.classList.add('concluida');
+                    cnhBtn.querySelector('span').textContent = 'Etapa concluída';
+                    cnhBtn.querySelector('span').style.color = '#79C61E';
+                }
+            }
+
+  
+            var termosAceitos = sessionStorage.getItem('termosAceitos');
+            if (termosAceitos === 'true') {
+                var termosBtn = document.getElementById('termosBtn');
+                if (termosBtn) {
+                    termosBtn.classList.add('concluida');
+                    termosBtn.querySelector('span').textContent = 'Etapa concluída';
+                    termosBtn.querySelector('span').style.color = '#79C61E';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

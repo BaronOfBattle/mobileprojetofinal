@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastrocep2.css">
+    <title>Rideshare</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE <span class="help">Precisa de ajuda?</span></h1>
+    </div>
+    <hr>
+    <h2 class="tema"> Dados da empresa </h2>
+    <div class="container">
+        <div class="login-box">
+            <input type= "text" placeholder="Nome da empresa">
+            <input type= "text" placeholder="Cargo">
+            <input type= "text" placeholder="Código">
+            <input type="text" placeholder="Endereço">
+            <div class="cep-container">
+                <input type="text" placeholder="CEP" class="input-cep">
+                <input type="text" placeholder="Número" class="input-numero">
+            </div>
+            <br>
+            <hr class="separator">
+            <div class="btn-continuar-container"> 
+                <h3 class="btn-cadastrar" onclick="continuar()">CONTINUAR</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function continuar() {
+            
+            sessionStorage.setItem('dadosDaEmpresaConcluidos', 'true');
+            
+            window.location.href = 'cadastromotorista.html';
+        }
+    </script>
+</body>
+</html>
