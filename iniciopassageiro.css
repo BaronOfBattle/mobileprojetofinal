@@ -156,7 +156,7 @@ input[type="password"] {
     padding: 16px; 
     width: 100%; /* ocupa toda a largura */
     height: 300px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: left; /* centraliza horizontalmente */
     justify-content: center; /* centraliza verticalmente */
     align-items: center;
