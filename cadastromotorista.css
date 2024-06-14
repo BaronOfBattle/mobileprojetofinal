@@ -118,7 +118,7 @@ body {
     background-color: #EEEEEE;  
     color: #79C61E;
     padding: 16px; 
-    width: 340px;
+    width: 350px;
     height: 65px;
     font-size: 20px;
     text-align: center;
@@ -130,7 +130,7 @@ body {
 
 .separator {
     margin-bottom: 20px; 
-    margin-top: 20px;
+    margin-top: 85px;
     margin-right: 0px;
 }
 

@@ -1,75 +1,92 @@
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="cadastropassageiro.css">
-        <title>Rideshare</title>
-    </head>
-    <body>
-        <div class="header">
-            <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE</h1>
-            <div class="help">Precisa de ajuda?</div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastropassageiro.css">
+    <title>Rideshare</title>
+    <style>
+        .btn-cadastrar:disabled {
+            background-color: grey; /* Desabilitado visualmente */
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE</h1>
+        <div class="help">Precisa de ajuda?</div>
+    </div>
+    <br>
+    <hr class="hr1">
+    <p class="tema">Cadastro de passageiro</p>
+    <p class="subtema">Preencha os campos para continuar.</p>
+    <div class="container">
+        <div class="etapas">
+            <button id="perfilBtn" class="destaque" onclick="window.location.href = 'fotoperfil.html'">Perfil de usuário<br><span>Etapa pendente</span></button>
+            <hr class="linha">
+            <button id="empresaBtn" class="destaque" onclick="window.location.href = 'cadastrocep.html'">Dados da empresa<br><span>Etapa pendente</span></button>
+            <hr class="linha">
+            <button id="termosBtn" class="destaque" onclick="window.location.href = 'termos.html'">Termos de uso e segurança<br><span>Etapa pendente</span></button>
         </div>
         <br>
-        <hr class="hr1">
-        <p class="tema">Cadastro de passageiro</p>
-        <p class="subtema">Preencha os campos para continuar.</p>
-        <div class="container">
-            <div class="etapas">
-                <button id="perfilBtn" class="destaque" onclick="window.location.href = 'fotoperfil.html'">Perfil de usuário<br><span>Etapa pendente</span></button>
-                <hr class="linha">
-                <button id="empresaBtn" class="destaque" onclick="window.location.href = 'cadastrocep.html'">Dados da empresa<br><span>Etapa pendente</span></button>
-                <hr class="linha">
-                <button class="destaque" onclick="window.location.href = 'termos.html'">Termos de uso e segurança<br><span>Etapa pendente</span></button>
-            </div>
-            <br>
-            <hr class="separator">
-            <div>
-                <button class="btn-cadastrar" onclick="continuar()">CONTINUAR</button>
-            </div>
+        <hr class="separator">
+        <div>
+            <button id="continuarBtn" class="btn-cadastrar" onclick="continuar()" disabled>CONTINUAR</button>
         </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-     
-                var dadosDaEmpresaConcluidos = sessionStorage.getItem('dadosDaEmpresaConcluidos');
-                if (dadosDaEmpresaConcluidos === 'true') {
-                    var empresaBtn = document.getElementById('empresaBtn');
-                    if (empresaBtn) {
-                        empresaBtn.classList.add('concluida');
-                        empresaBtn.querySelector('span').textContent = 'Etapa concluída';
-                        empresaBtn.querySelector('span').style.color = '#79C61E';
-                    }
-                }
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function checkAllStepsCompleted() {
+                var perfilDeUsuarioConcluido = sessionStorage.getItem('perfilDeUsuarioConcluido') === 'true';
+                var dadosDaEmpresaConcluidos = sessionStorage.getItem('dadosDaEmpresaConcluidos') === 'true';
+                var termosAceitos = sessionStorage.getItem('termosAceitos') === 'true';
 
-     
-                var perfilDeUsuarioConcluido = sessionStorage.getItem('perfilDeUsuarioConcluido');
-                if (perfilDeUsuarioConcluido === 'true') {
-                    var perfilBtn = document.getElementById('perfilBtn');
-                    if (perfilBtn) {
-                        perfilBtn.classList.add('concluida');
-                        perfilBtn.querySelector('span').textContent = 'Etapa concluída';
-                        perfilBtn.querySelector('span').style.color = '#79C61E';
-                    }
+                if (perfilDeUsuarioConcluido && dadosDaEmpresaConcluidos && termosAceitos) {
+                    document.getElementById('continuarBtn').disabled = false;
+                } else {
+                    document.getElementById('continuarBtn').disabled = true;
                 }
-
-      
-                var termosAceitos = sessionStorage.getItem('termosAceitos');
-                if (termosAceitos === 'true') {
-                    var termosBtn = document.querySelector('.etapas button:last-child');
-                    if (termosBtn) {
-                        termosBtn.classList.add('concluida');
-                        termosBtn.querySelector('span').textContent = 'Etapa concluída';
-                        termosBtn.querySelector('span').style.color = '#79C61E';
-                    }
-                }
-            });
-
-            function continuar() {
-    
-                window.location.href = 'perfil.html';
             }
-        </script>
-        <script src="cadastropassageiro.js" defer></script>
-    </body>
-    </html>
+
+            var dadosDaEmpresaConcluidos = sessionStorage.getItem('dadosDaEmpresaConcluidos');
+            if (dadosDaEmpresaConcluidos === 'true') {
+                var empresaBtn = document.getElementById('empresaBtn');
+                if (empresaBtn) {
+                    empresaBtn.classList.add('concluida');
+                    empresaBtn.querySelector('span').textContent = 'Etapa concluída';
+                    empresaBtn.querySelector('span').style.color = '#79C61E';
+                }
+            }
+
+            var perfilDeUsuarioConcluido = sessionStorage.getItem('perfilDeUsuarioConcluido');
+            if (perfilDeUsuarioConcluido === 'true') {
+                var perfilBtn = document.getElementById('perfilBtn');
+                if (perfilBtn) {
+                    perfilBtn.classList.add('concluida');
+                    perfilBtn.querySelector('span').textContent = 'Etapa concluída';
+                    perfilBtn.querySelector('span').style.color = '#79C61E';
+                }
+            }
+
+            var termosAceitos = sessionStorage.getItem('termosAceitos');
+            if (termosAceitos === 'true') {
+                var termosBtn = document.getElementById('termosBtn');
+                if (termosBtn) {
+                    termosBtn.classList.add('concluida');
+                    termosBtn.querySelector('span').textContent = 'Etapa concluída';
+                    termosBtn.querySelector('span').style.color = '#79C61E';
+                }
+            }
+
+            // Check if all steps are completed
+            checkAllStepsCompleted();
+        });
+
+        function continuar() {
+            window.location.href = 'perfil.html';
+        }
+    </script>
+    <script src="cadastropassageiro.js" defer></script>
+</body>
+</html>

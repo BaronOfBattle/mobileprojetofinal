@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastromotorista.css">
     <title>Rideshare</title>
+    <style>
+        .btn-cadastrar:disabled {
+            background-color: grey; /* Cor para o botão desabilitado */
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -13,8 +19,8 @@
     </div>
     <br>
     <hr>
-    <p class="tema"> Cadastro de motoristas </p>
-    <p class="subtema"> Preencha os campos para continuar </p>
+    <p class="tema">Cadastro de motoristas</p>
+    <p class="subtema">Preencha os campos para continuar</p>
     <div class="container">
         <div class="etapas">
             <button id="perfilBtn" class="destaque" onclick="window.location.href = 'fotoperfil2.html'">Perfil de usuário<br><span>Etapa pendente</span></button>
@@ -23,20 +29,32 @@
             <hr class="linha">
             <button id="automovelBtn" class="destaque" onclick="window.location.href = 'automovel.html'">Automóvel<br><span>Etapa pendente</span></button>
             <hr class="linha">
-            <button id="cnhBtn" class="destaque" onclick="window.location.href = 'cnh.html'">Carteira Nacional de Habilitação <br><span>Etapa pendente</span></button>
+            <button id="cnhBtn" class="destaque" onclick="window.location.href = 'cnh.html'">Carteira Nacional de Habilitação<br><span>Etapa pendente</span></button>
             <hr class="linha">
             <button id="termosBtn" class="destaque" onclick="window.location.href = 'termos2.html'">Termos de uso e segurança<br><span>Etapa pendente</span></button>
-          
         </div>
         <br>
         <hr class="separator">
         <div> 
-            <button class="btn-cadastrar" onclick="window.location.href = 'perfil.html'">CONTINUAR</button>
+            <button id="continuarBtn" class="btn-cadastrar" onclick="continuar()" disabled>CONTINUAR</button>
         </div>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            
+            function checkAllStepsCompleted() {
+                var perfilDeUsuarioConcluido = sessionStorage.getItem('perfilDeUsuarioConcluido') === 'true';
+                var dadosDaEmpresaConcluidos = sessionStorage.getItem('dadosDaEmpresaConcluidos') === 'true';
+                var dadosDoVeiculoConcluidos = sessionStorage.getItem('dadosDoVeiculoConcluidos') === 'true';
+                var cnhConcluida = sessionStorage.getItem('cnhConcluida') === 'true';
+                var termosAceitos = sessionStorage.getItem('termosAceitos') === 'true';
+
+                if (perfilDeUsuarioConcluido && dadosDaEmpresaConcluidos && dadosDoVeiculoConcluidos && cnhConcluida && termosAceitos) {
+                    document.getElementById('continuarBtn').disabled = false;
+                } else {
+                    document.getElementById('continuarBtn').disabled = true;
+                }
+            }
+
             var perfilDeUsuarioConcluido = sessionStorage.getItem('perfilDeUsuarioConcluido');
             if (perfilDeUsuarioConcluido === 'true') {
                 var perfilBtn = document.getElementById('perfilBtn');
@@ -57,7 +75,6 @@
                 }
             }
 
-    
             var dadosDoVeiculoConcluidos = sessionStorage.getItem('dadosDoVeiculoConcluidos');
             if (dadosDoVeiculoConcluidos === 'true') {
                 var automovelBtn = document.getElementById('automovelBtn');
@@ -67,7 +84,6 @@
                     automovelBtn.querySelector('span').style.color = '#79C61E';
                 }
             }
-
 
             var cnhConcluida = sessionStorage.getItem('cnhConcluida');
             if (cnhConcluida === 'true') {
@@ -79,7 +95,6 @@
                 }
             }
 
-  
             var termosAceitos = sessionStorage.getItem('termosAceitos');
             if (termosAceitos === 'true') {
                 var termosBtn = document.getElementById('termosBtn');
@@ -89,7 +104,14 @@
                     termosBtn.querySelector('span').style.color = '#79C61E';
                 }
             }
+
+            // Check if all steps are completed
+            checkAllStepsCompleted();
         });
+
+        function continuar() {
+            window.location.href = 'perfil.html';
+        }
     </script>
 </body>
 </html>

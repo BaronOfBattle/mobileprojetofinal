@@ -13,7 +13,7 @@
     <hr>
     <div class="container">
         <div class="login-box">
-            <input type="text" placeholder="Nome e sobrenome">
+            <input type="text" id="nameInput" placeholder="Nome e sobrenome">
             <input type="text" placeholder="E-mail">
             <input type="text" id="datepicker" placeholder="Data de Nascimento">
             <div class="select-container">
@@ -38,7 +38,7 @@
             <br>
             <hr class="separator">
             <div class="btn-continuar-container"> 
-                <h3 class="btn-continuar">CONTINUAR</h3>
+                <h3 class="btn-continuar" id="continueButton">CONTINUAR</h3>
             </div>
         </div>
     </div>
@@ -53,8 +53,12 @@
                 yearRange: "-100:+0"
             });
 
-            $(".btn-continuar").click(function(){
-               
+            $("#continueButton").click(function(){
+                // Obtendo o nome do usuário
+                var userName = $("#nameInput").val();
+                // Armazenando no localStorage
+                localStorage.setItem("userName", userName);
+                // Redirecionando para a próxima página
                 window.location.href = "escolhamodo.html";
             });
         });

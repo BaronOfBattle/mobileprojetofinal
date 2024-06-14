@@ -20,7 +20,7 @@
     <div class="container">
         <div class="circle" id="circle"></div>
         <div class="info">
-            <h2>Nome</h2>
+            <h2 id="userNameDisplay">Nome</h2>
             <div class="rectangle">
                 <span class="rating">4.9</span>
                 <span class="star">&#9733;</span>
@@ -105,5 +105,15 @@
     </footer>
     <script src="script.js"></script>
     <script src="perfil.js"></script>
+    <script>
+                document.addEventListener("DOMContentLoaded", function() {
+            
+            var userName = localStorage.getItem("userName");
+            if (userName) {
+                
+                document.getElementById("userNameDisplay").textContent = userName;
+            }
+        });
+    </script>
 </body>
 </html>
