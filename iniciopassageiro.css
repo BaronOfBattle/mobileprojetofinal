@@ -48,7 +48,7 @@ body {
 .role-selection {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .role-button {
@@ -155,7 +155,7 @@ input[type="password"] {
     color: #000000;
     padding: 16px; 
     width: 100%; /* ocupa toda a largura */
-    height: 300px;
+    height: 350px;
     font-size: 16px;
     text-align: left; /* centraliza horizontalmente */
     justify-content: center; /* centraliza verticalmente */
@@ -166,8 +166,8 @@ input[type="password"] {
 
 .motorista-foto {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 13px;
+    right: 25px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -253,4 +253,12 @@ input[type="password"] {
     background-color: #fff;
     border-radius: 50%;
     overflow: hidden; 
+}
+
+.hr-second {
+    margin: 20px auto; 
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 105%;
+    margin-top: 10px;
 }

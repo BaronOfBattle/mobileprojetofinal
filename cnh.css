@@ -34,7 +34,7 @@ body {
     font-size: 15px;
     color: #79C61E; 
     vertical-align: middle; 
-    margin-left: 51px; 
+    margin-left: 11px; 
 }
 
 .location-icon {
@@ -59,7 +59,7 @@ input[type="password"] {
 }
 
 .tema {
-    margin-top: 30px;
+    margin-top: 10px;
     color: #79C61E;
 }
 
@@ -109,9 +109,10 @@ font-weight: 300;
     display: flex;
     justify-content: center; /* centraliza verticalmente */
     align-items: center;
+
 }
 
 .separator {
     margin-bottom: 30px; 
-    margin-top:140px; 
+    margin-top:100px; 
 }

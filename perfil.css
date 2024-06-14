@@ -47,11 +47,12 @@ body {
     background-color: #d3dadf;
     border-radius: 50%;
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 0px;
     cursor: pointer;
     overflow: hidden;
     position: relative;
-    margin-left: calc(50% - 200px);
+    margin-left: calc(89- - 200px);
+    margin-bottom: -8;
 }
 
 .info {
@@ -95,6 +96,14 @@ body {
 .viagens {
     text-align: left;
     color: #043F2D;
+    margin-top: 0px;
+}
+    
+.viagens2 {
+    text-align: center;
+    color: #043F2D;
+    margin-top: -15px;
+    margin-left: 10px;
 }
 
 .rectangle2 {
@@ -159,4 +168,5 @@ hr {
     border: 0;
     border-top: 1px solid #ccc;
     width: 105%;
+    margin-top: 10px;
 }

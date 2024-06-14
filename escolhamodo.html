@@ -39,13 +39,13 @@
         function goToCadastro() {
             var url;
             if (selectedOption === 'motorista') {
-                url = 'iniciomotorista.html';
+                url = 'cadastromotorista.html';
             } else if (selectedOption === 'passageiro') {
-                url = 'iniciomotorista.html';
+                url = 'cadastropassageiro.html';
             } else if (selectedOption === 'ambos') {
                 var previousChoice = localStorage.getItem('previousChoice');
                 if (previousChoice === 'motorista') {
-                    url = 'iniciomotorista.html';
+                    url = 'cadastromotorista.html';
                 } else {
                     url = 'iniciomotorista.html';
                 }

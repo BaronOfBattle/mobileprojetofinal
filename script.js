@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="motorista-foto">
                         <img src="foto1.png" alt="Foto do Motorista">
                     </div>
-                    <h3 class="nome-motorista">João</h3>
+                    <h3 class="nome-motorista">Maya</h3>
                     <h3 class="btn-viajar"> IDA - R$ 4,00 </h3>
                     <h4 class="btn-viajar2">FIAT UNO 1.0 FIRE FLEX</h4>
                     <h3 class="horario"> 17:30</h3>  
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="motorista-foto">
                         <img src="foto2.png" alt="Foto do Motorista">
                     </div>
-                    <h3 class="nome-motorista">Maria</h3>
+                    <h3 class="nome-motorista">Pietro</h3>
                     <h3 class="btn-viajar"> IDA - R$ 4,00 </h3>
                     <h4 class="btn-viajar2">FIAT UNO 1.0 FIRE FLEX</h4>
                     <h3 class="horario"> 17:30</h3>  
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="motorista-foto">
                         <img src="foto3.png" alt="Foto do Motorista">
                     </div>
-                    <h3 class="nome-motorista">Douglas</h3>
+                    <h3 class="nome-motorista">Kirya</h3>
                     <h3 class="btn-viajar"> IDA - R$ 4,00 </h4>
                     <h4 class="btn-viajar2">FIAT UNO 1.0 FIRE FLEX</h4>
                     <h3 class="horario"> 17:30</h3>  
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="btn-solicitar-container"> 
                     <div class="info">
                         <h2>Nome</h2>
-                        <p>PROFESSOR - FAC SENAC</p>
+                        <p>PROFESSOR - SENAC</p>
                         <div class="rectangle">
                             <span class="rating">4.9</span>
                             <span class="star">&#9733;</span>

@@ -34,7 +34,7 @@ body {
     font-size: 15px;
     color: #79C61E; 
     vertical-align: middle; 
-    margin-left: 51px; 
+    margin-left: 10px; 
 }
 
 .location-icon {
@@ -96,12 +96,13 @@ input[type="password"] {
     font-family: 'Poppins-Bold', sans-serif;
     display: inline-block; 
     margin-right: auto; 
-    margin-left: 0; 
+    margin-left: 0;
+    margin-top: -50px;
 }
 
 
 
 .separator {
     margin-bottom: 40px; 
-    margin-top: 250px; 
+    margin-top: 190px; 
 }
